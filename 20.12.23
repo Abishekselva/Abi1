@@ -1,0 +1,21 @@
+#include<stdio.h>
+int main()
+{
+    int a=0,b=1,n;
+    printf("Enter num : ");
+    scanf("%d",&n);
+    printf("Fibonacci series : ");
+    for(int i=0;i<=n;i++)
+    {
+        printf("%d ",fib(i));
+    }
+}
+int fib(int n)
+{
+    if(n<=1){
+        return n;
+    }
+    else {
+        return fib(n-1)+fib(n-2);
+    }
+}
