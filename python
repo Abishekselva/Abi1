@@ -1,0 +1,1276 @@
+1. You have a list of strings representing words. Develop a Python program to Count the number of vowels (a, e, i, o, u) in each word and print the word along with its vowel count.
+
+words = ["hello", "world", "python", "programming", "example"]
+for word in words:   
+    vowel_count = 0
+  
+    for char in word:
+        if char.lower() in ['a', 'e', 'i', 'o', 'u']:
+            vowel_count += 1
+    print(f"Word: {word}, Vowel Count: {vowel_count}")
+Sample Output :
+Word: hello, Vowel Count: 2
+Word: world, Vowel Count: 1
+Word: python, Vowel Count: 1
+Word: programming, Vowel Count: 3
+Word: example, Vowel Count: 3
+2. You have a list of tuples, each representing a person's name and their corresponding age (e.g., [("Alice", 25), ("Bob", 30), ...]). Write a Python program to Calculate the average age of all the people in the list and print it.
+
+people = [("Alice", 25), ("Bob", 30), ("Charlie", 40), ("David", 35)]
+total_age = 0
+count = 0
+  age = person[1]
+       total_age += age
+      count += 1
+average_age = total_age / count
+print("Average age:", average_age)
+
+Sample Output : Average age: 32.5
+3. You have two lists of integers. Develop a Python program to create a new list that contains the common elements present in both lists.
+list1 = [1, 2, 3, 4, 5]
+list2 = [4, 5, 6, 7, 8]
+
+
+common_elements = []
+
+
+for element in list1:
+    if element in list2:
+        
+        common_elements.append(element)
+
+
+print("Common elements:", common_elements)
+Sample Output :
+Common elements: [4, 5]
+4. You have a list of temperatures measured in Celsius. Write a Python program to Convert each temperature to Fahrenheit and print the resulting list.
+# Sample list of temperatures measured in Celsius
+temperatures_celsius = [0, 10, 20, 30, 40]
+
+
+temperatures_fahrenheit = []
+
+
+for celsius in temperatures_celsius:
+    fahrenheit = (celsius * 9/5) + 32
+    temperatures_fahrenheit.append(fahrenheit)
+
+print("Temperatures in Fahrenheit:", temperatures_fahrenheit)
+Sample Output :
+Temperatures in Fahrenheit: [32.0, 50.0, 68.0, 86.0, 104.0]
+5. You have a list of strings representing names of students in a class. Write a Python program to Remove any duplicate names from the list and print the updated list.
+# Sample list of names of students in a class
+student_names = ["Alice", "Bob", "Charlie", "Alice", "David", "Bob", "Eve"]
+
+
+unique_names = []
+for name in student_names:
+    # Check if the name is not already in the unique_names list
+    if name not in unique_names:
+        # If the name is not a duplicate, add it to the unique_names list
+        unique_names.append(name)
+# Print the updated list of unique names
+print("Updated list of unique names:", unique_names)
+Sample Output :
+Updated list of unique names: ['Alice', 'Bob', 'Charlie', 'David', 'Eve']
+Low Level:
+1. You have a list of tuples representing (name, age) pairs of people. Write a Python program to convert this list of tuples into a dictionary where the names are keys and the ages are values.
+# Sample list of tuples representing (name, age) pairs of people
+people = [("Alice", 25), ("Bob", 30), ("Charlie", 35)]
+
+# Initialize an empty dictionary to store the converted data
+people_dict = {}
+
+# Iterate over each tuple in the list
+for name, age in people:
+    # Add each (name, age) pair to the dictionary
+    people_dict[name] = age
+
+# Print the resulting dictionary
+print("Dictionary with names as keys and ages as values:", people_dict)
+
+Sample Output: 
+Dictionary with names as keys and ages as values: {'Alice': 25, 'Bob': 30, 'Charlie': 35}
+2. You have a list of tuples, each containing a student's name and their corresponding scores in three subjects (Math, Physics, Chemistry). Write a Python program to sort the list of tuples based on the total score (sum of scores in all subjects) in descending order.
+# Sample list of tuples containing (name, Math score, Physics score, Chemistry score)
+students_scores = [("Alice", 90, 85, 95), ("Bob", 80, 75, 85), ("Charlie", 95, 90, 100)]
+
+# Sort the list of tuples based on the total score in descending order
+sorted_students = sorted(students_scores, key=lambda x: sum(x[1:]), reverse=True)
+
+# Print the sorted list of tuples
+print("Sorted list of tuples based on total score (in descending order):")
+for student in sorted_students:
+    print(student)
+Sample Output :
+Sorted list of tuples based on total score (in descending order):
+('Charlie', 95, 90, 100)
+('Alice', 90, 85, 95)
+('Bob', 80, 75, 85)
+3. You have two tuples representing dates in the format (year, month, day). Write a Python program to compare the two dates and print whether the first date is earlier, later, or the same as the second date.
+# Sample tuples representing dates (year, month, day)
+date1 = (2022, 10, 15)
+date2 = (2023, 5, 20)
+
+# Compare the two dates
+if date1 < date2:
+    print("The first date is earlier than the second date.")
+elif date1 > date2:
+    print("The first date is later than the second date.")
+else:
+    print("The first date is the same as the second date.")
+Sample Output:
+Sample tuples
+date1 = (2022, 10, 15)
+date2 = (2023, 5, 20)
+Expected output
+The first date is earlier than the second date.
+4. You have two tuples containing integers. Write a Python program to concatenate the two tuples and create a new tuple with the elements from both tuples.
+# Sample tuples containing integers
+tuple1 = (1, 2, 3)
+tuple2 = (4, 5, 6)
+
+# Concatenate the two tuples to create a new tuple
+new_tuple = tuple1 + tuple2
+
+# Print the new tuple
+print("Concatenated tuple:", new_tuple)
+Sample output:
+Concatenated tuple: (1, 2, 3, 4, 5, 6)
+5. You have a tuple containing the names of months in a year. Write a Python program to slice the tuple and create a new tuple containing only the names of the first half of the months.
+# Tuple containing the names of months in a year
+months = ("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December")
+
+# Slice the tuple to get the first half of the months
+first_half_months = months[:len(months)//2]
+
+# Print the new tuple containing the names of the first half of the months
+print("Names of the first half of the months:", first_half_months)
+Sample Output :
+Names of the first half of the months: ('January', 'February', 'March', 'April', 'May', 'June')
+High Level:
+1. You work for a finance company that manages investment portfolios for clients. Your team is tasked with analyzing the performance of various investment instruments over time. Each instrument's performance is represented as a list of tuples, where each tuple contains the date and the corresponding value of the investment.
+Your task is to identify the investment instrument that has shown the highest growth rate over a specified period.
+Design a Python program to analyze the performance of investment instruments. Create lists to represent the performance data of three investment instruments over time. Then, prompt the user to enter a start and end date for the analysis period. Calculate the growth rate for each instrument over the specified period and determine which instrument has shown the highest growth rate. Display the name of the instrument along with its growth rate.
+# Define the performance data for investment instruments
+instrument1 = [("2023-01-01", 1000), ("2023-03-01", 1200), ("2023-06-01", 1400)]
+instrument2 = [("2023-01-01", 2000), ("2023-03-01", 1800), ("2023-06-01", 2500)]
+instrument3 = [("2023-01-01", 1500), ("2023-03-01", 1700), ("2023-06-01", 1800)]
+
+# Prompt the user to enter start and end dates for the analysis period
+start_date = input("Enter start date (YYYY-MM-DD): ")
+end_date = input("Enter end date (YYYY-MM-DD): ")
+
+# Calculate growth rate for each instrument over the specified period
+max_growth_rate = -1
+best_instrument = None
+
+# Function to convert date strings to integers for comparison
+def date_to_int(date):
+    year, month, day = map(int, date.split('-'))
+    return year * 10000 + month * 100 + day
+
+# Iterate over each instrument's performance data
+for instrument, data in [("Instrument 1", instrument1), ("Instrument 2", instrument2), ("Instrument 3", instrument3)]:
+    start_value = None
+    end_value = None
+
+    # Find start and end values for the specified period
+    for date, value in data:
+        if date_to_int(date) == date_to_int(start_date):
+            start_value = value
+        elif date_to_int(date) == date_to_int(end_date):
+            end_value = value
+
+    # If both start and end values are found, calculate growth rate
+    if start_value is not None and end_value is not None:
+        growth_rate = ((end_value - start_value) / start_value) * 100
+        print(f"{instrument}: Growth rate = {growth_rate:.2f}%")
+
+        # Update the instrument with the highest growth rate
+        if growth_rate > max_growth_rate:
+            max_growth_rate = growth_rate
+            best_instrument = instrument
+
+# Print the instrument with the highest growth rate
+print(f"The instrument with the highest growth rate is {best_instrument} with a growth rate of {max_growth_rate:.2f}%.")
+
+
+Sample Output :
+Instrument 1: Growth rate = 40.00%
+Instrument 2: Growth rate = 25.00%
+Instrument 3: Growth rate = 20.00%
+The instrument with the highest growth rate is Instrument 1 with a growth rate of 40.00%.
+2. You are part of a team developing an inventory management system for a retail company. The system needs to track product availability across multiple warehouses. Each warehouse is represented as a list of tuples, where each tuple contains the product identifier and the quantity available. Your task is to implement a feature that checks if a given product is available in any of the warehouses and returns the total quantity available.
+Design a Python program to implement the inventory management system. Create lists to represent three warehouses, each containing tuples of product identifiers and quantities available. Then, prompt the user to enter a product identifier and check if the product is available in any of the warehouses. If available, display the total quantity available across all warehouses; otherwise, display a message indicating that the product is out of stock.
+# Define the inventory data for three warehouses
+warehouse1 = [("product1", 50), ("product2", 30), ("product3", 20)]
+warehouse2 = [("product4", 40), ("product2", 20), ("product5", 60)]
+warehouse3 = [("product6", 70), ("product3", 10), ("product7", 25)]
+
+# Prompt the user to enter a product identifier
+product_id = input("Enter product identifier: ")
+
+# Initialize total quantity available
+total_quantity = 0
+found = False
+# Iterate over each warehouse's inventory to check for the product
+for warehouse in [warehouse1, warehouse2, warehouse3]:
+    for item in warehouse:
+        if item[0] == product_id:
+            total_quantity += item[1]
+            found = True
+            break  # Break the inner loop if product is found in current warehouse
+
+# Check if product is available and display the total quantity available
+if found:
+    print(f"Total quantity of product {product_id}: {total_quantity}")
+else:
+    print("Product is out of stock.")
+
+Sample Output :
+Total quantity of product product3: 30
+3. You are working for a social media analytics company. Your team is responsible for analyzing user engagement metrics to provide insights to clients. One of your tasks involves identifying trending topics based on user comments. Each comment is represented as a tuple containing the comment text and the number of likes it received. Your goal is to develop a function to identify the top trending topics based on the frequency of specific keywords mentioned in the comments.
+Design a Python function identify_trending_topics (comments: List[Tuple[str, int]], keywords: List[str]) -> List[str] that takes a list of comment tuples and a list of keywords as input. Each comment tuple consists of the comment text and the number of likes it received. The function should identify the top trending topics by counting the frequency of each keyword mentioned in the comments and return a list of keywords sorted in descending order of their frequency.
+Ensure your implementation efficiently handles cases where multiple keywords have the same frequency. Provide explanations for your design choices and any assumptions made.
+# Sample comments data
+comments = [
+    ("Great product, love the features!", 50),
+    ("The customer service was terrible, won't recommend.", 20),
+    ("Best purchase ever, highly recommended.", 100),
+    ("The delivery was delayed, very disappointed.", 10),
+    ("Amazing quality, exceeded my expectations.", 80)
+]
+
+# List of keywords to track
+keywords = ["product", "customer service", "recommend", "delivery", "quality"]
+
+# Dictionary to store keyword frequencies
+keyword_freq = {keyword: 0 for keyword in keywords}
+
+# Count keyword frequencies in comments
+for comment, likes in comments:
+    for keyword in keywords:
+        if keyword in comment.lower():
+            keyword_freq[keyword] += 1
+
+# Sort keywords by frequency in descending order
+sorted_keywords = sorted(keyword_freq.items(), key=lambda x: x[1], reverse=True)
+
+# Extract sorted keywords from sorted list of tuples
+top_trending_topics = [keyword for keyword, freq in sorted_keywords]
+
+# Display the top trending topics
+print("Top Trending Topics:")
+for topic in top_trending_topics:
+    print(topic)
+Sample Output :
+Top Trending Topics:
+product
+quality
+recommend
+delivery
+customer service
+Low Level:
+1. Write a Python program to create a dictionary where the keys are numbers from 1 to 5 and the values are their squares.
+# Create an empty dictionary
+square_dict = {}
+
+# Iterate over numbers from 1 to 5
+for num in range(1, 6):
+    # Assign the square of the number as the value to the dictionary with the number as the key
+    square_dict[num] = num ** 2
+
+# Print the resulting dictionary
+print(square_dict)
+Sample Output :
+{1: 1, 2: 4, 3: 9, 4: 16, 5: 25}
+2. Write a Python program to print a dictionary in table format.
+# Sample dictionary
+data = {'Name': ['John', 'Alice', 'Bob'],
+        'Age': [25, 30, 35],
+        'City': ['New York', 'Paris', 'London']}
+
+# Find the maximum length of each key for formatting
+max_lengths = {key: max(len(str(key)), max(len(str(x)) for x in values)) for key, values in data.items()}
+
+# Print table headers
+print("|", end="")
+for key, max_length in max_lengths.items():
+    print(f" {key.ljust(max_length)} |", end="")
+print()
+
+# Print separator
+print("+", end="")
+for _, max_length in max_lengths.items():
+    print(f"-{'-' * max_length}-+", end="")
+print()
+
+# Print table rows
+for i in range(len(data['Name'])):
+    print("|", end="")
+    for key, values in data.items():
+        print(f" {str(values[i]).ljust(max_lengths[key])} |", end="")
+    print()
+
+# Print separator
+print("+", end="")
+for _, max_length in max_lengths.items():
+    print(f"-{'-' * max_length}-+", end="")
+print()
+Sample Output :
+| Name   | Age | City    |
++--------+-----+---------+
+| John   | 25  | New York|
+| Alice  | 30  | Paris   |
+| Bob    | 35  | London  |
++--------+-----+---------+
+3. Write a Python program to find the second largest value in a dictionary.
+# Sample dictionary
+data = {'a': 10, 'b': 20, 'c': 30, 'd': 15, 'e': 25}
+
+# Get the unique values and sort them in descending order
+unique_values = sorted(set(data.values()), reverse=True)
+
+# If there are at least two unique values, the second largest exists
+if len(unique_values) >= 2:
+    second_largest = unique_values[1]
+    # Find the corresponding key(s) for the second largest value
+    keys = [key for key, value in data.items() if value == second_largest]
+    print(f"The second largest value in the dictionary is {second_largest}.")
+    print(f"It appears with key(s): {keys}")
+else:
+    print("There is no second largest value in the dictionary.")
+Sample Output :
+The second largest value in the dictionary is 25.
+It appears with key(s): ['e']
+4. Write a Python program to combine two dictionaries by adding values for common keys.
+# Sample dictionaries
+dict1 = {'a': 10, 'b': 20, 'c': 30}
+dict2 = {'b': 30, 'c': 40, 'd': 50}
+
+# Combine dictionaries by adding values for common keys
+combined_dict = {}
+
+# Iterate over keys in dict1
+for key in dict1:
+    # If key is present in dict2, add the values together
+    if key in dict2:
+        combined_dict[key] = dict1[key] + dict2[key]
+    # Otherwise, add the value from dict1 to the combined dictionary
+    else:
+        combined_dict[key] = dict1[key]
+
+# Iterate over keys in dict2 to add remaining keys
+for key in dict2:
+    # If key is not present in combined_dict, add the value from dict2
+    if key not in combined_dict:
+        combined_dict[key] = dict2[key]
+
+print("Combined dictionary:", combined_dict)
+Sample Output :
+Combined dictionary: {'a': 10, 'b': 50, 'c': 70, 'd': 50}
+5. Write a Python program to convert a dictionary of lists into a list of dictionaries.
+# Sample dictionary of lists
+dict_of_lists = {'Name': ['John', 'Alice', 'Bob'],
+                 'Age': [25, 30, 35],
+                 'City': ['New York', 'Paris', 'London']}
+
+# Get the length of the lists (assuming all lists have the same length)
+list_length = len(next(iter(dict_of_lists.values())))
+
+# Initialize an empty list to store dictionaries
+list_of_dicts = []
+
+# Iterate over the range of list length
+for i in range(list_length):
+    # Create a new dictionary for each index
+    new_dict = {}
+    # Populate the new dictionary with values from the original dictionary
+    for key, values in dict_of_lists.items():
+        new_dict[key] = values[i]
+    # Append the new dictionary to the list
+    list_of_dicts.append(new_dict)
+
+# Print the list of dictionaries
+for dictionary in list_of_dicts:
+    print(dictionary)
+Sample Output:
+{'Name': 'John', 'Age': 25, 'City': 'New York'}
+{'Name': 'Alice', 'Age': 30, 'City': 'Paris'}
+{'Name': 'Bob', 'Age': 35, 'City': 'London'}
+6. Write a Python program to create a dictionary from two lists, where one list contains keys and the other contains values.
+# Sample lists of keys and values
+keys = ['Name', 'Age', 'City']
+values = ['John', 25, 'New York']
+
+# Create dictionary from two lists
+result_dict = dict(zip(keys, values))
+
+# Print the resulting dictionary
+print("Dictionary from two lists:", result_dict)
+Sample Output :
+Dictionary from two lists: {'Name': 'John', 'Age': 25, 'City': 'New York'}
+7. Write a Python program to create a dictionary of dictionaries.
+# Define inner dictionaries
+inner_dict1 = {'a': 1, 'b': 2, 'c': 3}
+inner_dict2 = {'x': 10, 'y': 20, 'z': 30}
+
+# Create dictionary of dictionaries
+outer_dict = {'dict1': inner_dict1, 'dict2': inner_dict2}
+
+# Print the resulting dictionary of dictionaries
+print("Dictionary of dictionaries:", outer_dict)
+Sample Output :
+Dictionary of dictionaries: {'dict1': {'a': 1, 'b': 2, 'c': 3}, 'dict2': {'x': 10, 'y': 20, 'z': 30}}
+8. Write a Python program to multiply all the values in a dictionary.
+# Sample dictionary
+data = {'a': 2, 'b': 3, 'c': 4}
+
+# Initialize the product variable to 1
+product = 1
+
+# Multiply all values together
+for value in data.values():
+    product *= value
+
+# Print the product
+print("Product of all values in the dictionary:", product)
+Sample Output 
+Product of all values in the dictionary: 24
+9. Write a Python program to sort a dictionary by its keys.
+# Sample dictionary
+data = {'b': 2, 'a': 1, 'c': 3}
+
+# Sort the dictionary by keys
+sorted_data = dict(sorted(data.items()))
+
+# Print the sorted dictionary
+print("Sorted dictionary by keys:", sorted_data)
+Sample Output :
+Sorted dictionary by keys: {'a': 1, 'b': 2, 'c': 3}
+10. Write a Python program to update the values of a specific key in a dictionary.
+# Sample dictionary
+data = {'a': 1, 'b': 2, 'c': 3}
+
+# Update the value of key 'b'
+data['b'] = 20
+
+# Print the updated dictionary
+print("Updated dictionary:", data)
+Sample Output :
+Updated dictionary: {'a': 1, 'b': 20, 'c': 3}
+Medium Level:
+1. You are developing a voting system for a school election. Write a Python program to count the number of votes each candidate receives and store the results in a dictionary.
+Sample Dictionary: votes = {'Candidate1': 150, 'Candidate2': 200, 'Candidate3': 180}
+Sample Output: Candidate1: 150, Candidate2: 200, Candidate3: 180
+Note : input from the user
+# Initialize an empty dictionary to store the votes
+votes = {}
+
+# Get the number of candidates from the user
+num_candidates = int(input("Enter the number of candidates: "))
+
+# Get the votes for each candidate from the user
+for i in range(1, num_candidates + 1):
+    candidate_name = input(f"Enter the name of candidate {i}: ")
+    vote_count = int(input(f"Enter the number of votes for {candidate_name}: "))
+    votes[candidate_name] = vote_count
+
+# Print the dictionary of votes
+print("Dictionary of votes:", votes)
+
+# Print the output
+print("Output:")
+for candidate, count in votes.items():
+    print(f"{candidate}: {count}")
+Sample Output :
+Enter the number of candidates: 3
+Enter the name of candidate 1: Candidate1
+Enter the number of votes for Candidate1: 150
+Enter the name of candidate 2: Candidate2
+Enter the number of votes for Candidate2: 200
+Enter the name of candidate 3: Candidate3
+Enter the number of votes for Candidate3: 180
+
+Dictionary of votes: {'Candidate1': 150, 'Candidate2': 200, 'Candidate3': 180}
+Output:
+Candidate1: 150
+Candidate2: 200
+Candidate3: 180
+2. You are implementing a word frequency counter for a text processing application. Write a Python program to count the frequency of each word in a given text and store the results in a dictionary.
+Sample Text: "This is a sample text. This text contains sample words."
+Sample Output: {'This': 2, 'is': 1, 'a': 1, 'sample': 2, 'text.': 1, 'contains': 1, 'words.': 1}
+# Get the input text from the user
+text = input("Enter the text: ")
+
+# Split the text into words
+words = text.split()
+
+# Initialize an empty dictionary to store word frequencies
+word_freq = {}
+
+# Count the frequency of each word
+for word in words:
+    # Remove punctuation marks from the word
+    word = word.strip('.,?!')
+    # Convert the word to lowercase to ensure case-insensitive counting
+    word = word.lower()
+    # Update the frequency count for the word
+    word_freq[word] = word_freq.get(word, 0) + 1
+
+# Print the dictionary of word frequencies
+print("Word frequency count:")
+print(word_freq)
+sample output :
+Enter the text: This is a sample text. This text contains sample words.
+Word frequency count:
+{'this': 2, 'is': 1, 'a': 1, 'sample': 2, 'text': 1, 'contains': 1, 'words': 1}
+3. You are designing a dictionary-based translator. Write a Python program to translate a sentence from English to another language using a dictionary containing English-to-foreign language mappings.
+Sample Dictionary: translations = {'hello': 'bonjour', 'world': 'monde'}
+Sample Output: 'bonjour monde'
+# Sample dictionary of translations
+translations = {'hello': 'bonjour', 'world': 'monde'}
+
+# Sample English sentence
+sentence = input("Enter the English sentence: ")
+
+# Translate the sentence using the dictionary
+translated_sentence = ' '.join(translations.get(word, word) for word in sentence.split())
+
+# Print the translated sentence
+print("Translated sentence:", translated_sentence)
+Sample output :
+Enter the English sentence: hello world
+Translated sentence: bonjour monde
+5. You have a dictionary representing student grades in various subjects. Write a Python program to calculate the average grade for each student.
+Sample Dictionary: grades = {'John': [85, 90, 88], 'Alice': [75, 80, 82], 'Bob': [92, 88, 90]}
+Sample Output: John: 87.67, Alice: 79.00, Bob: 90.00
+# Initialize an empty dictionary to store student grades
+grades = {}
+
+# Get the number of students from the user
+num_students = int(input("Enter the number of students: "))
+
+# Get the grades for each student from the user
+for i in range(num_students):
+    student_name = input(f"Enter the name of student {i+1}: ")
+    student_grades = input(f"Enter the grades for {student_name} (comma-separated): ").split(',')
+    student_grades = [int(grade.strip()) for grade in student_grades]  # Convert grades to integers
+    grades[student_name] = student_grades
+
+# Calculate the average grade for each student
+average_grades = {student: sum(grades) / len(grades) for student, grades in grades.items()}
+
+# Print the average grades
+print("Average grades:")
+for student, avg_grade in average_grades.items():
+    print(f"{student}: {avg_grade:.2f}")
+Sample Output :
+Enter the number of students: 3
+Enter the name of student 1: John
+Enter the grades for John (comma-separated): 85, 90, 88
+Enter the name of student 2: Alice
+Enter the grades for Alice (comma-separated): 75, 80, 82
+Enter the name of student 3: Bob
+Enter the grades for Bob (comma-separated): 92, 88, 90
+Average grades:
+John: 87.67
+Alice: 79.00
+Bob: 90.00
+
+High Level Questions:
+1. You are developing a movie recommendation system. Write a Python program to recommend movies to a user based on their preferences stored in a dictionary.
+Sample Dictionary: preferences = {'Action': ['The Dark Knight', 'Inception'], 'Comedy': ['The Hangover', 'Superbad']}
+Sample Output: Recommendations: ['The Dark Knight', 'Inception']
+# Initialize an empty dictionary to store preferences
+preferences = {}
+
+# Get the number of genres from the user
+num_genres = int(input("Enter the number of genres: "))
+
+# Get the preferences for each genre from the user
+for _ in range(num_genres):
+    genre = input("Enter the genre: ")
+    movies = input(f"Enter the movies for {genre} (comma-separated): ").split(',')
+    preferences[genre] = [movie.strip() for movie in movies]
+
+# Get the user's movie preferences
+user_preferences = input("Enter your movie preferences (comma-separated): ").split(',')
+
+# Initialize an empty list to store movie recommendations
+recommendations = []
+
+# Check each genre in preferences
+for genre, movies in preferences.items():
+    # Check if any movies in the genre are not already in the user preferences
+    recommended_movies = [movie for movie in movies if movie not in user_preferences]
+    # Add recommended movies to the recommendations list
+    recommendations.extend(recommended_movies)
+
+# Print the recommendations
+print("Recommendations:", recommendations)
+Sample Output :
+Enter the number of genres: 2
+Enter the genre: Action
+Enter the movies for Action (comma-separated): The Dark Knight, Inception
+Enter the genre: Comedy
+Enter the movies for Comedy (comma-separated): The Hangover, Superbad
+Enter your movie preferences (comma-separated): Inception, The Hangover
+Recommendations: ['The Dark Knight', 'Superbad']
+2. You are developing a dictionary-based spelling checker. Write a Python program to check the spelling of words in a document using a dictionary of valid words.
+Sample Dictionary: valid_words = {'apple', 'banana', 'orange', 'grape'}
+Sample Output: Misspelled words: ['aple', 'bannana']
+# Sample set of valid words
+valid_words = {'apple', 'banana', 'orange', 'grape'}
+
+# Get the input document from the user
+document = input("Enter the document: ")
+
+# Split the document into words
+words = document.split()
+
+# Initialize an empty list to store misspelled words
+misspelled_words = []
+
+# Check each word in the document
+for word in words:
+    # Check if the word is not in the set of valid words
+    if word.lower() not in valid_words:
+        misspelled_words.append(word)
+
+# Print the misspelled words
+print("Misspelled words:", misspelled_words)
+Sample output :
+Enter the document: apple banana grape strawberry
+Misspelled words: ['strawberry']
+3. You're creating a budget tracking application. Write a Python program to calculate the total expenses for each category stored in a dictionary.
+Sample Dictionary: expenses = {'Food': [100, 150], 'Transportation': [50, 75], 'Entertainment': [75, 100]}
+Sample Test Case: expenses
+Sample Output: {'Food': 250, 'Transportation': 125, 'Entertainment': 175}
+# Get the expenses from the user
+expenses = {}
+
+# Get the number of categories from the user
+num_categories = int(input("Enter the number of categories: "))
+
+# Get the expenses for each category from the user
+for _ in range(num_categories):
+    category = input("Enter the category: ")
+    amounts = input(f"Enter the expenses for {category} (comma-separated): ").split(',')
+    expenses[category] = [int(amount.strip()) for amount in amounts]
+
+# Calculate the total expenses for each category
+total_expenses = {category: sum(amounts) for category, amounts in expenses.items()}
+
+# Print the total expenses for each category
+print("Total expenses:")
+print(total_expenses)
+Sample output :
+Enter the number of categories: 3
+Enter the category: Food
+Enter the expenses for Food (comma-separated): 100, 150
+Enter the category: Transportation
+Enter the expenses for Transportation (comma-separated): 50, 75
+Enter the category: Entertainment
+Enter the expenses for Entertainment (comma-separated): 75, 100
+Total expenses:
+{'Food': 250, 'Transportation': 125, 'Entertainment': 175}
+4. You're developing a hotel reservation system. Write a Python program to check the availability of rooms for a given date stored in a dictionary.
+Sample Dictionary: room_availability = {'Standard': {'2024-04-12': 10, '2024-04-13': 5}, 'Deluxe': {'2024-04-12': 5, '2024-04-13': 2}}
+Sample Test Case: '2024-04-13'
+Sample Output: {'Standard': 5, 'Deluxe': 2}
+# Sample dictionary of room availability
+room_availability = {
+    'Standard': {'2024-04-12': 10, '2024-04-13': 5},
+    'Deluxe': {'2024-04-12': 5, '2024-04-13': 2}
+}
+
+# Get the date from the user
+date = input("Enter the date (YYYY-MM-DD): ")
+
+# Check the availability of rooms for the given date
+availability = {room_type: availability.get(date, 0) for room_type, availability in room_availability.items()}
+
+# Print the availability of rooms for the given date
+print("Room availability for", date + ":", availability)
+Sample Output:
+Enter the date (YYYY-MM-DD): 2024-04-13
+Room availability for 2024-04-13: {'Standard': 5, 'Deluxe': 2}
+5. Write a Python program to print all distinct values in a dictionary.
+Sample Data : [{"V":"S001"}, {"V": "S002"}, {"VI": "S001"}, {"VI": "S005"}, {"VII":"S005"}, {"V":"S009"},{"VIII":"S007"}]
+Expected Output : Unique Values: {'S005', 'S002', 'S007', 'S001', 'S009'}
+# Sample list of dictionaries
+data = [{"V": "S001"}, {"V": "S002"}, {"VI": "S001"}, {"VI": "S005"}, {"VII": "S005"}, {"V": "S009"}, {"VIII": "S007"}]
+
+# Extract values from the dictionaries
+values = [value for item in data for value in item.values()]
+
+# Convert the list of values to a set to get distinct values
+unique_values = set(values)
+
+# Print the unique values
+print("Unique Values:", unique_values)
+Sample output :
+Unique Values: {'S005', 'S002', 'S007', 'S001', 'S009'}
+Twins, [05-05-2024 09:22 PM]
+Write a Python program to combine two dictionaries by adding values for common keys.
+
+dict1 = {'a': 10, 'b': 20, 'c': 30}
+dict2 = {'b': 30, 'c': 40, 'd': 50}
+combined_dict ={}
+for key in dict1:
+    if key in dict2:
+        combined_dict[key] = dict1[key] + dict2[key]
+    else:
+        combined_dict[key] = dict1[key]
+for key in dict2dict2:
+    if key not in combined_dict:
+        combined_dict[key] = dict2[key]
+
+print("Combined dictionary:", combined_dict)
+Sample Output :
+Combined dictionary: {'a': 10, 'b': 50, 'c': 70, 'd': 50}
+
+Write a Python program to convert a dictionary of lists into a list of dictionaries.
+
+dict_of_lists = {'Name': ['John', 'Alice', 'Bob'],
+                 'Age': [25, 30, 35],
+                 'City': ['New York', 'Paris', 'London']}
+
+list_length =len(next(iter(dict_of_lists.values())))
+list_of_dicts =[]
+for i in range(list_length):
+    new_dict = {]
+    for key, values in dict_of_lists.items():
+        new_dict[key] = values[i]
+for dictionary in list_of_dicts:
+    print(dictionary)
+Sample Output:
+{'Name': 'John', 'Age': 25, 'City': 'New York'}
+{'Name': 'Alice', 'Age': 30, 'City': 'Paris'}
+{'Name': 'Bob', 'Age': 35, 'City': 'London'}
+
+Write a Python program to create a dictionary from two lists, where one list contains keys and the other contains values.
+
+keys = ['Name', 'Age', 'City']
+values = ['John', 25, 'New York']
+result_dict = dict(zip(keys, values))
+print("Dictionary from two lists:", result_dict)
+Sample Output :
+Dictionary from two lists: {'Name': 'John', 'Age': 25, 'City': 'New York'}
+
+Write a Python program to create a dictionary of dictionaries.
+
+inner_dict1 = {'a': 1, 'b': 2, 'c': 3}
+inner_dict2 = {'x': 10, 'y': 20, 'z': 30}
+outer_dict = {'dict1': inner_dict1, 'dict2': inner_dict2}
+print("Dictionary of dictionaries:", outer_dict)
+Sample Output :
+Dictionary of dictionaries: {'dict1': {'a': 1, 'b': 2, 'c': 3}, 'dict2': {'x': 10, 'y': 20, 'z': 30}}
+
+Write a Python program to create a dictionary where the keys are numbers from 1 to 5 and the values are their squares.
+
+square_dict = {}
+for num in range(1, 6):
+    square_dict[num] = num ** 2
+print(square_dict)
+Sample Output :
+{1: 1, 2: 4, 3: 9, 4: 16, 5: 25}
+
+Write a Python program to find the second largest value in a dictionary.
+
+data = {'a': 10, 'b': 20, 'c': 30, 'd': 15, 'e': 25}
+
+unique_values = sorted(set(data.values()), reverse=True)
+if len(unique_values) >= 2:
+    second_largest = unique_values[1]
+    keys = [key for key, value in data.items() if value == second_largest]
+    print(f"The second largest value in the dictionary is {second_largest}.")
+    print(f"It appears with key(s): {keys}")
+else:
+    print("There is no second largest value in the dictionary.")
+Sample Output :
+The second largest value in the dictionary is 25.
+It appears with key(s): ['e']
+
+Write a Python program to multiply all the values in a dictionary.
+
+data = {'a': 2, 'b': 3, 'c': 4}
+product = 1
+for value in data.values():
+    product *= value
+print("Product of all values in the dictionary:", product)
+Sample Output 
+Product of all values in the dictionary: 24
+
+Write a Python program to print a dictionary in table format.
+
+data = {'Name': ['John', 'Alice', 'Bob'],
+        'Age': [25, 30, 35],
+        'City': ['New York', 'Paris', 'London']}
+max_lengths = {key: max(len(str(key)), max(len(str(x)) for x in values)) for key, values in data.items()}
+print("|", end="")
+for key, max_length in max_lengths.items():
+    print(f" {key.ljust(max_length)} |", end="")
+print()
+print("+", end="")
+for _, max_length in max_lengths.items():
+    print(f"-{'-' * max_length}-+", end="")
+print()
+for i in range(len(data['Name'])):
+    print("|", end="")
+    for key, values in data.items():
+        print(f" {str(values[i]).ljust(max_lengths[key])} |", end="")
+    print()
+print("+", end="")
+for _, max_length in max_lengths.items():
+    print(f"-{'-' * max_length}-+", end="")
+print()
+
+Sample Output :
+| Name   | Age | City    |
++--------+-----+---------+
+| John   | 25  | New York|
+| Alice  | 30  | Paris   |
+| Bob    | 35  | London  |
++--------+-----+---------+
+
+Twins, [05-05-2024 09:22 PM]
+Write a Python program to sort a dictionary by its keys.
+
+  data = {'b': 2, 'a': 1, 'c': 3}
+sorted_data = dict(sorted(data.items()))
+print("Sorted dictionary by keys:", sorted_data)
+Sample Output :
+Sorted dictionary by keys: {'a': 1, 'b': 2, 'c': 3}
+
+Write a Python program to update the values of a specific key in a dictionary.
+
+data = {'a': 1, 'b': 2, 'c': 3}
+data['b'] = 20
+print("Updated dictionary:", data)
+Sample Output :
+Updated dictionary: {'a': 1, 'b': 20, 'c': 3}
+
+You are developing a dictionary-based spelling checker. Write a Python program to check the spelling of words in a document using a dictionary of valid words.
+
+You are developing a dictionary-based spelling checker. Write a Python program to check the spelling of words in a document using a dictionary of valid words.
+Sample Dictionary: valid_words = {'apple', 'banana', 'orange', 'grape'}
+Sample Output: Misspelled words: ['aple', 'bannana']
+valid_words = {'apple', 'banana', 'orange', 'grape'}
+
+document = input("Enter the document: ")
+
+words = document.split()
+
+misspelled_words = []
+
+for word in words:
+
+    if word.lower() not in valid_words:
+        misspelled_words.append(word)
+
+print("Misspelled words:", misspelled_words)
+Sample output :
+Enter the document: apple banana grape strawberry
+Misspelled words: ['strawberry']
+
+You are developing a movie recommendation system. Write a Python program to recommend movies to a user based on their preferences stored in a dictionary.
+
+You are developing a movie recommendation system. Write a Python program to recommend movies to a user based on their preferences stored in a dictionary.
+Sample Dictionary: preferences = {'Action': ['The Dark Knight', 'Inception'], 'Comedy': ['The Hangover', 'Superbad']}
+Sample Output: Recommendations: ['The Dark Knight', 'Inception']
+preferences = {}
+num_genres = int(input("Enter the number of genres: "))
+for _ in range(num_genres):
+    genre = input("Enter the genre: ")
+    movies = input(f"Enter the movies for {genre} (comma-separated): ").split(',')
+    preferences[genre] = [movie.strip() for movie in movies]
+user_preferences = input("Enter your movie preferences (comma-separated): ").split(',')
+recommendations = []
+for genre, movies in preferences.items():
+    recommended_movies = [movie for movie in movies if movie not in user_preferences]
+    recommendations.extend(recommended_movies)
+
+
+print("Recommendations:", recommendations)
+Sample Output :
+Enter the number of genres: 2
+Enter the genre: Action
+Enter the movies for Action (comma-separated): The Dark Knight, Inception
+Enter the genre: Comedy
+Enter the movies for Comedy (comma-separated): The Hangover, Superbad
+Enter your movie preferences (comma-separated): Inception, The Hangover
+Recommendations: ['The Dark Knight', 'Superbad']
+
+You are developing a voting system for a school election. Write a Python program to count the number of votes each candidate receives and store the results in a dictionary. Sample Dictionary: votes = {'Candidate1': 150, 'Candidate2': 200, 'Candidate3': 180} Sample Output: Candidate1: 150, Candidate2: 200, Candidate3: 180 Note : input from the user
+
+You are developing a voting system for a school election. Write a Python program to count the number of votes each candidate receives and store the results in a dictionary.
+Sample Dictionary: votes = {'Candidate1': 150, 'Candidate2': 200, 'Candidate3': 180}
+Sample Output: Candidate1: 150, Candidate2: 200, Candidate3: 180
+Note : input from the user
+votes = {}
+num_candidates = int(input("Enter the number of candidates: "))
+
+for i in range(1, num_candidates + 1):
+    candidate_name = input(f"Enter the name of candidate {i}: ")
+    vote_count = int(input(f"Enter the number of votes for {candidate_name}: "))
+    votes[candidate_name] = vote_count
+print("Dictionary of votes:", votes)
+
+Twins, [05-05-2024 09:22 PM]
+print("Output:")
+for candidate, count in votes.items():
+    print(f"{candidate}: {count}")
+Sample Output :
+Enter the number of candidates: 3
+Enter the name of candidate 1: Candidate1
+Enter the number of votes for Candidate1: 150
+Enter the name of candidate 2: Candidate2
+Enter the number of votes for Candidate2: 200
+Enter the name of candidate 3: Candidate3
+Enter the number of votes for Candidate3: 180
+
+Dictionary of votes: {'Candidate1': 150, 'Candidate2': 200, 'Candidate3': 180}
+Output:
+Candidate1: 150
+Candidate2: 200
+Candidate3: 180
+
+# You are implementing a word frequency counter for a text processing application. Write a Python program to count the frequency of each word in a given text and store the results in a dictionary.
+
+Sample Text: "This is a sample text. This text contains sample words."
+Sample Output: {'This': 2, 'is': 1, 'a': 1, 'sample': 2, 'text.': 1, 'contains': 1, 'words.': 1}
+text = input("Enter the text: ")
+words = text.split()
+word_freq = {}
+for word in words:
+    word = word.strip('.,?!')
+    word = word.lower()
+    word_freq[word] = word_freq.get(word, 0) + 1
+print("Word frequency count:")
+print(word_freq)
+sample output :
+Enter the text: This is a sample text. This text contains sample words.
+Word frequency count:
+{'this': 2, 'is': 1, 'a': 1, 'sample': 2, 'text': 1, 'contains': 1, 'words': 1}
+
+# You have a dictionary representing student grades in various subjects. Write a Python program to calculate the average grade for each student.
+
+  You have a dictionary representing student grades in various subjects. Write a Python program to calculate the average grade for each student.
+Sample Dictionary: grades = {'John': [85, 90, 88], 'Alice': [75, 80, 82], 'Bob': [92, 88, 90]}
+Sample Output: John: 87.67, Alice: 79.00, Bob: 90.00
+grades = {}
+num_students = int(input("Enter the number of students: "))
+for i in range(num_students):
+    student_name = input(f"Enter the name of student {i+1}: ")
+    student_grades = input(f"Enter the grades for {student_name} (comma-separated): ").split(',')
+    student_grades = [int(grade.strip()) for grade in student_grades]  # Convert grades to integers
+    grades[student_name] = student_grades
+average_grades = {student: sum(grades) / len(grades) for student, grades in grades.items()}
+print("Average grades:")
+for student, avg_grade in average_grades.items():
+    print(f"{student}: {avg_grade:.2f}")
+Sample Output :
+Enter the number of students: 3
+Enter the name of student 1: John
+Enter the grades for John (comma-separated): 85, 90, 88
+Enter the name of student 2: Alice
+Enter the grades for Alice (comma-separated): 75, 80, 82
+Enter the name of student 3: Bob
+Enter the grades for Bob (comma-separated): 92, 88, 90
+Average grades:
+John: 87.67
+Alice: 79.00
+Bob: 90.00
+
+                                                                                                                              
+# You have a list of strings representing names of students in a class. Write a Python program to Remove any duplicate names from the list and print the updated list.
+  student_names = ["Alice", "Bob", "Charlie", "Alice", "David", "Bob", "Eve"]
+unique_names = []
+for name in student_names:
+    if name not in unique_names:
+        unique_names.append(name)
+print("Updated list of unique names:", unique_names)
+Sample Output :
+Updated list of unique names: ['Alice', 'Bob', 'Charlie', 'David', 'Eve']
+
+#You have a list of strings representing words. Develop a Python program to Count the number of vowels (a, e, i, o, u) in each word and print the word along with its vowel count.
+
+words = ["hello", "world", "python", "programming", "example"]
+for word in words:
+    vowel_count = 0
+    for char in word:
+        if char.lower() in ['a', 'e', 'i', 'o', 'u']:
+            vowel_count += 1
+    print(f"Word: {word}, Vowel Count: {vowel_count}")
+Sample Output :
+Word: hello, Vowel Count: 2
+Word: world, Vowel Count: 1
+Word: python, Vowel Count: 1
+Word: programming, Vowel Count: 3
+Word: example, Vowel Count: 3
+
+Twins, [05-05-2024 09:22 PM]
+# You have a list of temperatures measured in Celsius. Write a Python program to Convert each temperature to Fahrenheit and print the resulting list.
+
+temperatures_celsius = [0, 10, 20, 30, 40]
+temperatures_fahrenheit = []
+for celsius in temperatures_celsius:
+    fahrenheit = (celsius * 9/5) + 32
+    temperatures_fahrenheit.append(fahrenheit)
+print("Temperatures in Fahrenheit:", temperatures_fahrenheit)
+Sample Output :
+Temperatures in Fahrenheit: [32.0, 50.0, 68.0, 86.0, 104.0]
+
+# You have a list of tuples representing (name, age) pairs of people. Write a Python program to convert this list of tuples into a dictionary where the names are keys and the ages are values
+
+people = [("Alice", 25), ("Bob", 30), ("Charlie", 35)]
+people_dict = {}
+for name, age in people:
+    people_dict[name] = age
+print("Dictionary with names as keys and ages as values:", people_dict)
+
+Sample Output: 
+Dictionary with names as keys and ages as values: {'Alice': 25, 'Bob': 30, 'Charlie': 35}
+
+
+# You have a list of tuples, each containing a student's name and their corresponding scores in three subjects (Math, Physics, Chemistry). Write a Python program to sort the list of tuples based on the total score (sum of scores in all subjects) in descending order.
+
+You have a list of tuples, each representing a person's name and their corresponding age (e.g., [("Alice", 25), ("Bob", 30), ...]). Write a Python program to Calculate the average age of all the people in the list and print it.students_scores = [("Alice", 90, 85, 95), ("Bob", 80, 75, 85), ("Charlie", 95, 90, 100)]
+sorted_students = sorted(students_scores, key=lambda x: sum(x[1:]), reverse=True
+print("Sorted list of tuples based on total score (in descending order):")
+for student in sorted_students:
+    print(student)
+Sample Output :
+Sorted list of tuples based on total score (in descending order):
+('Charlie', 95, 90, 100)
+('Alice', 90, 85, 95)
+('Bob', 80, 75, 85)
+
+# You have a list of tuples, each representing a person's name and their corresponding age (e.g., [("Alice", 25), ("Bob", 30), ...]). Write a Python program to Calculate the average age of all the people in the list and print it.
+
+people = [("Alice", 25), ("Bob", 30), ("Charlie", 40), ("David", 35)]
+total_age = 0
+count = 0
+
+for person in people:
+    age = person[1]
+    total_age += age
+    
+    count += 1
+average_age = total_age / count
+print("Average age:", average_age)
+
+Sample Output : Average age: 32.5
+
+# You have a tuple containing the names of months in a year. Write a Python program to slice the tuple and create a new tuple containing only the names of the first half of the months.
+
+
+months = ("January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December")
+first_half_months = months[:len(months)//2]
+print("Names of the first half of the months:", first_half_months)
+Sample Output :
+Names of the first half of the months: ('January', 'February', 'March', 'April', 'May', 'June')
+
+# You have two lists of integers. Develop a Python program to create a new list that contains the common elements present in both lists.
+
+list1 = [1, 2, 3, 4, 5]
+list2 = [4, 5, 6, 7, 8]
+common_elements = []
+for element in list1:
+    if element in list2:
+        common_elements.append(element)
+print("Common elements:", common_elements)
+Sample Output :
+Common elements: [4, 5]
+
+# You have two tuples containing integers. Write a Python program to concatenate the two tuples and create a new tuple with the elements from both tuples.
+
+tuple1 = (1, 2, 3)
+tuple2 = (4, 5, 6)
+new_tuple = tuple1 + tuple2
+print("Concatenated tuple:", new_tuple)
+Sample output:
+Concatenated tuple: (1, 2, 3, 4, 5, 6)
+
+# You have two tuples representing dates in the format (year, month, day). Write a Python program to compare the two dates and print whether the first date is earlier, later, or the same as the second date.
+
+Twins, [05-05-2024 09:22 PM]
+date1 = (2022, 10, 15)
+date2 = (2023, 5, 20)
+if date1 < date2:
+    print("The first date is earlier than the second date.")
+elif date1 > date2:
+    print("The first date is later than the second date.")
+else:
+    print("The first date is the same as the second date.")
+Sample Output:
+Sample tuples
+date1 = (2022, 10, 15)
+date2 = (2023, 5, 20)
+Expected output
+The first date is earlier than the second date.
+
+# You're creating a budget tracking application. Write a Python program to calculate the total expenses for each category stored in a dictionary.
+
+You're creating a budget tracking application. Write a Python program to calculate the total expenses for each category stored in a dictionary.
+Sample Dictionary: expenses = {'Food': [100, 150], 'Transportation': [50, 75], 'Entertainment': [75, 100]}
+Sample Test Case: expenses
+Sample Output: {'Food': 250, 'Transportation': 125, 'Entertainment': 175}
+
+expenses = {}
+
+num_categories = int(input("Enter the number of categories: "))
+
+for _ in range(num_categories):
+    category = input("Enter the category: ")
+    amounts = input(f"Enter the expenses for {category} (comma-separated): ").split(',')
+    expenses[category] = [int(amount.strip()) for amount in amounts]
+
+total_expenses = {category: sum(amounts) for category, amounts in expenses.items()}
+
+print("Total expenses:")
+print(total_expenses)
+Sample output :
+Enter the number of categories: 3
+Enter the category: Food
+Enter the expenses for Food (comma-separated): 100, 150
+Enter the category: Transportation
+Enter the expenses for Transportation (comma-separated): 50, 75
+Enter the category: Entertainment
+Enter the expenses for Entertainment (comma-separated): 75, 100
+Total expenses:
+{'Food': 250, 'Transportation': 125, 'Entertainment': 175}
+
+# You're developing a hotel reservation system. Write a Python program to check the availability of rooms for a given date stored in a dictionary.
+
+You're developing a hotel reservation system. Write a Python program to check the availability of rooms for a given date stored in a dictionary.
+Sample Dictionary: room_availability = {'Standard': {'2024-04-12': 10, '2024-04-13': 5}, 'Deluxe': {'2024-04-12': 5, '2024-04-13': 2}}
+Sample Test Case: '2024-04-13'
+Sample Output: {'Standard': 5, 'Deluxe': 2}
+
+room_availability = {
+    'Standard': {'2024-04-12': 10, '2024-04-13': 5},
+    'Deluxe': {'2024-04-12': 5, '2024-04-13': 2}
+}
+
+date = input("Enter the date (YYYY-MM-DD): ")
+
+availability = {room_type: availability.get(date, 0) for room_type, availability in room_availability.items()}
+
+print("Room availability for", date + ":", availability)
+Sample Output:
+Enter the date (YYYY-MM-DD): 2024-04-13
+Room availability for 2024-04-13: {'Standard': 5, 'Deluxe': 2}
+
+# You work for a finance company that manages investment portfolios for clients. Your team is tasked with analyzing the performance of various investment instruments over time. Each instrument's performance is represented as a list of tuples, where each tuple contains the date and the corresponding value of the investment. Your task is to identify the investment instrument that has shown the highest growth rate over a specified period.
+# Design a Python program to analyze the performance of investment instruments. Create lists to represent the performance data of three investment instruments over time. Then, prompt the user to enter a start and end date for the analysis period. Calculate the growth rate for each instrument over the specified period and determine which instrument has shown the highest growth rate. Display the name of the instrument along with its growth rate.
+
+instrument1 = [("2023-01-01", 1000), ("2023-03-01", 1200), ("2023-06-01", 1400)]
+instrument2 = [("2023-01-01", 2000), ("2023-03-01", 1800), ("2023-06-01", 2500)]
+instrument3 = [("2023-01-01", 1500), ("2023-03-01", 1700), ("2023-06-01", 1800)]
+
+start_date = input("Enter start date (YYYY-MM-DD): ")
+end_date = input("Enter end date (YYYY-MM-DD): ")
+
+max_growth_rate = -1
+best_instrument = None
+
+Twins, [05-05-2024 09:22 PM]
+def date_to_int(date):
+    year, month, day = map(int, date.split('-'))
+    return year * 10000 + month * 100 + day
+
+for instrument, data in [("Instrument 1", instrument1), ("Instrument 2", instrument2), ("Instrument 3", instrument3)]:
+    start_value = None
+    end_value = None
+
+    for date, value in data:
+        if date_to_int(date) == date_to_int(start_date):
+            start_value = value
+        elif date_to_int(date) == date_to_int(end_date):
+            end_value = value
+
+    if start_value is not None and end_value is not None:
+        growth_rate = ((end_value - start_value) / start_value) * 100
+        print(f"{instrument}: Growth rate = {growth_rate:.2f}%")
+
+        if growth_rate > max_growth_rate:
+            max_growth_rate = growth_rate
+            
+print(f"The instrument with the highest growth rate is {best_instrument} with a growth rate of {max_growth_rate:.2f}%.")
+
+
+Sample Output :
+Instrument 1: Growth rate = 40.00%
+Instrument 2: Growth rate = 25.00%
+Instrument 3: Growth rate = 20.00%
+The instrument with the highest growth rate is Instrument 1 with a growth rate of 40.00%.
+
+# You are part of a team developing an inventory management system for a retail company. The system needs to track product availability across multiple warehouses. Each warehouse is represented as a list of tuples, where each tuple contains the product identifier and the quantity available. Your task is to implement a feature that checks if a given product is available in any of the warehouses and returns the total quantity available.
+# Design a Python program to implement the inventory management system. Create lists to represent three warehouses, each containing tuples of product identifiers and quantities available. Then, prompt the user to enter a product identifier and check if the product is available in any of the warehouses. If available, display the total quantity available across all warehouses; otherwise, display a message indicating that the product is out of stock.
+
+warehouse1 = [("product1", 50), ("product2", 30), ("product3", 20)]
+warehouse2 = [("product4", 40), ("product2", 20), ("product5", 60)]
+warehouse3 = [("product6", 70), ("product3", 10), ("product7", 25)]
+
+product_id = input("Enter product identifier: ")
+
+total_quantity = 0
+found = False
+
+for warehouse in [warehouse1, warehouse2, warehouse3]:
+    for item in warehouse:
+        if item[0] == product_id:
+            total_quantity += item[1]
+            found = True
+            break  
+
+if found:
+    print(f"Total quantity of product {product_id}: {total_quantity}")
+else:
+    print("Product is out of stock.")
+
+Sample Output :
+Total quantity of product product3: 30
+
+'''You are working for a social media analytics company. Your team is responsible for analyzing user engagement metrics to provide insights to clients. One of your tasks involves identifying trending topics based on user comments. Each comment is represented as a tuple containing the comment text and the number of likes it received. Your goal is to develop a function to identify the top trending topics based on the frequency of specific keywords mentioned in the comments.
+Design a Python function identify_trending_topics (comments: List[Tuple[str, int]], keywords: List[str]) -> List[str] that takes a list of comment tuples and a list of keywords as input. Each comment tuple consists of the comment text and the number of likes it received. The function should identify the top trending topics by counting the frequency of each keyword mentioned in the comments and return a list of keywords sorted in descending order of their frequency.
+Ensure your implementation efficiently handles cases where multiple keywords have the same frequency. Provide explanations for your design choices and any assumptions made.'''
+
+comments = [
+    ("Great product, love the features!", 50),
+    ("The customer service was terrible, won't recommend.", 20),
+    ("Best purchase ever, highly recommended.", 100),
+    ("The delivery was delayed, very disappointed.", 10),
+    ("Amazing quality, exceeded my expectations.", 80)
+]
+
+Twins, [05-05-2024 09:22 PM]
+keywords = ["product", "customer service", "recommend", "delivery", "quality"]
+
+
+keyword_freq = {keyword: 0 for keyword in keywords}
+
+for comment, likes in comments:
+    for keyword in keywords:
+        if keyword in comment.lower():
+            keyword_freq[keyword] += 1
+
+
+sorted_keywords = sorted(keyword_freq.items(), key=lambda x: x[1], reverse=True)
+
+top_trending_topics = [keyword for keyword, freq in sorted_keywords]
+
+print("Top Trending Topics:")
+for topic in top_trending_topics:
+    print(topic)
+Sample Output :
+Top Trending Topics:
+product
+quality
+recommend
+delivery
+customer service
