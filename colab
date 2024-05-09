@@ -1,0 +1,123 @@
+[5/9, 4:17 PM] Aakash Ksr Rep: n = int(input("How many terms? "))
+n1, n2 = 0, 1
+count = 0
+
+
+if n <= 0:
+   print("Please enter a  +ve int")
+elif n == 1:
+   print("Fibonacci sequence upto",n,":")
+   print(n1)
+else:
+   print("Fibonacci sequence:")
+   while count < n:
+       print(n1)
+       nth = n1 + n2
+       n1 = n2
+       n2 = nth
+       count += 1
+[5/9, 4:17 PM] Aakash Ksr Rep: a=int(input("Enter Unit : "))
+if(a<100):
+    print("\nBill amt Rs.0")
+elif(a>100 and a<200):
+    print("\nBill amt Rs.",(a-100)*5)
+elif(a>200):
+    print("\nBill amt Rs.",500+(a-200)*10)
+[5/9, 4:17 PM] Aakash Ksr Rep: r = int(input("Enter number of rows: "))
+k = 0
+
+for i in range(1, r+1):
+    for s in range(1, (r-i)+1):
+        print(end="  ")
+
+    while k!=(2*i-1):
+        print("* ", end="")
+        k += 1
+
+    k = 0
+    print()
+[5/9, 4:17 PM] Aakash Ksr Rep: r=int(input("\nHow many yr your experienced : "))
+s=int(input("\nEnter your Salary: "))
+if(r>2):
+    print("\nBonus + This month salary : ",(s+((4*s)/100)) )
+elif(r>4):
+    print("\nBonus + This month salary : ",(s+((7*s)/100)) )
+elif(r>8):
+    print("\nBonus + This month salary : ",(s+((10*s)/100)) )
+else:
+    print("\nBetter Luck Next Time")
+[5/9, 4:17 PM] Aakash Ksr Rep: def sort_zeros_ones(input_list):
+    zeros_count = input_list.count(0)
+    ones_count = len(input_list) - zeros_count
+    sorted_list = [0] * zeros_count + [1] * ones_count
+    return sorted_list
+
+input_list = [0, 1, 0, 1, 1, 0, 1, 0, 1, 0]
+output_list = sort_zeros_ones(input_list)
+print(output_list)
+[5/9, 4:17 PM] Aakash Ksr Rep: def curency(m):
+    print("Doller to Rs = ",m*80)
+def degree(c):
+    f=(c*(9/5)+32)
+    print("Celcious to Fharenheit =",f)
+op=int(input("Enter your option : "))
+if(op==1):
+    e=int(input("Enter Dollers :"))
+    curency(e)
+elif(op==2):
+    d=int(input("Enter Celcious: "))
+    degree(d)
+[5/9, 4:17 PM] Aakash Ksr Rep: a=0
+b=0
+c=0
+for i in range(10):
+    vote=int(input("Enter cnd's no. :"))
+    if(vote==1):
+        a+=1
+    elif(vote==2):
+        b+=1
+    elif(c==1):
+        c+=1
+if(a!=0):
+    if(a>b and a>b):
+        print("A is Winner")
+    else:
+        print("A is Runner")
+elif(b!=0):
+    if(b>a and b>c):
+        print("B is Winner")
+    else:
+        print("B is Runner")
+elif(c!=0):
+    if(c>a and c>b):
+        print("C is Winner")
+    else:
+        print("C is Runner")
+[5/9, 4:17 PM] Aakash Ksr Rep: numbers = [5, 8, 3, 12, 7, 1, 9]
+
+largest = numbers[0]
+smallest = numbers[0]
+for num in numbers:
+    if (num > largest):
+        largest = num
+    if (num < smallest):
+        smallest = num
+
+print("Largest no. in the list:", largest)
+print("Smallest no. in the list:", smallest)
+[5/9, 4:17 PM] Aakash Ksr Rep: a=[1,2,3,4,5,6,7,8,9,10]
+b=[]
+c=[]
+d=[]
+e=[]
+for i in range(len(a)):
+    if(a[i]%2==0):
+       b.append(a[i])
+       d.append(i*i)
+    else:
+        c.append(a[i])
+        e.append(i*i)
+print("Odd Numbers: ",b)
+print("Even Numbers: ",c)
+print("Odd Squares: ",d)
+print("Even Squares: ",e)
