@@ -23,7 +23,7 @@ elif(a>100 and a<200):
     print("\nBill amt Rs.",(a-100)*5)
 elif(a>200):
     print("\nBill amt Rs.",500+(a-200)*10)
-[5/9, 4:17 PM] Aakash Ksr Rep: r = int(input("Enter number of rows: "))
+ r = int(input("Enter number of rows: "))
 k = 0
 
 for i in range(1, r+1):
@@ -55,7 +55,7 @@ else:
 input_list = [0, 1, 0, 1, 1, 0, 1, 0, 1, 0]
 output_list = sort_zeros_ones(input_list)
 print(output_list)
-[5/9, 4:17 PM] Aakash Ksr Rep: def curency(m):
+ def curency(m):
     print("Doller to Rs = ",m*80)
 def degree(c):
     f=(c*(9/5)+32)
@@ -93,7 +93,7 @@ elif(c!=0):
         print("C is Winner")
     else:
         print("C is Runner")
-[5/9, 4:17 PM] Aakash Ksr Rep: numbers = [5, 8, 3, 12, 7, 1, 9]
+ numbers = [5, 8, 3, 12, 7, 1, 9]
 
 largest = numbers[0]
 smallest = numbers[0]
