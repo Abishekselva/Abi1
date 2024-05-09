@@ -1,4 +1,4 @@
-[5/9, 4:17 PM] Aakash Ksr Rep: n = int(input("How many terms? "))
+ n = int(input("How many terms? "))
 n1, n2 = 0, 1
 count = 0
 
@@ -16,7 +16,7 @@ else:
        n1 = n2
        n2 = nth
        count += 1
-[5/9, 4:17 PM] Aakash Ksr Rep: a=int(input("Enter Unit : "))
+ a=int(input("Enter Unit : "))
 if(a<100):
     print("\nBill amt Rs.0")
 elif(a>100 and a<200):
@@ -36,7 +36,7 @@ for i in range(1, r+1):
 
     k = 0
     print()
-[5/9, 4:17 PM] Aakash Ksr Rep: r=int(input("\nHow many yr your experienced : "))
+ r=int(input("\nHow many yr your experienced : "))
 s=int(input("\nEnter your Salary: "))
 if(r>2):
     print("\nBonus + This month salary : ",(s+((4*s)/100)) )
